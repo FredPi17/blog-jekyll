@@ -23,7 +23,7 @@ email: fpinaud17@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ceci est mon blog personnel où je publie des articles concernant la tech, le bois et le DIY.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://blog.fredericpinaud.fr" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.fredericpinaud.ovh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FredericPinaud
 github_username:  FredPi17
 
