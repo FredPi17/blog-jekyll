@@ -1,0 +1,8 @@
+- name: Accueil
+  link: /
+- name: A Propos
+  link: /about
+- name: Ecole
+  link: /school
+- name: Perso
+  link: /personnal

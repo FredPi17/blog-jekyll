@@ -22,7 +22,7 @@ title: FP | BLOG
 email: fpinaud17@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Ceci est mon blog personnel où je publie des articles concernant la tech, le bois et le DIY.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://blog.fredericpinaud.ovh" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FredericPinaud
 github_username:  FredPi17
@@ -32,6 +32,16 @@ theme: minima
 plugins:
   - jekyll-feed
 
+sass:
+  sass_dir: assets/css
+
+exclude: 
+  - LICENSE
+  - Makefile
+  - README.md
+  - package.json
+  - package-lock.json
+  - yarn.lock
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
