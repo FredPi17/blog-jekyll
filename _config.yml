@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Frédéric Pinaud
+title: FP | BLOG
 email: fpinaud17@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal website which includes my CV, personal projects and school ones.
+  Ceci est mon blog personnel où je publie des articles concernant la tech, le bois et le DIY.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.fredericpinaud.fr" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: FredericPinaud
 github_username:  FredPi17
 
