@@ -1,0 +1,11 @@
+h1, H4 { font-family: "Playfair Display", Georgia, "Times New Roman", serif; }
+
+h4 { font-size: 1.5rem; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 { margin-bottom: .5rem; font-family: inherit; font-weight: 500; line-height: 1.2; color: inherit; }
+
+.font-italic { font-style: italic !important; }
+
+.blog-footer { padding: 2.5rem 0; color: #999; text-align: center; background-color: #f9f9f9; border-top: .05rem solid #e5e5e5; border-bottom: 0; }
+
+/*# sourceMappingURL=styles.css.map */

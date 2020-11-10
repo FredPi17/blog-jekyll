@@ -8,28 +8,71 @@ layout: default
 <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
     <div class="col-md-6 px-0">
         <h1 class="display-4 font-italic">Bienvenue sur mon blog !</h1>
-        <p class="lead my-3">Ce blog permet d'afficher différents sujets qui m'importent. Comme la tech, l'électronique, le bois et les impressions 3D.</p>
+        <p class="lead my-3">Ce site me permet d'afficher différents sujets qui m'importent. Comme la tech, l'électronique, le bois et les impressions 3D.</p>
     </div>
 </div>
 
 <div class="row mb-2">
-    {% for article in site.posts %}
-    <div class="col-md-6">
+    {% for article in site.posts limit:3 %}
+    <div class="col-md">
         <div class="card flex-md-row mb-4 shadow-sm h-md-250">
             <div class="card-body d-flex flex-column align-items-start">
-                <strong class="d-inline-block mb-2 text-primary">{{ article.categories}}</strong>
+                <strong class="d-inline-block mb-2 text-primary">{{ article.category }}</strong>
                 <h3 class="mb-0">
                     <a class="text-dark" href="{{ article.link }}">{{ article.title }}</a>
                 </h3>
-                <div class="mb-1 text-muted">{{ article.date }}</div>
+                <div class="mb-1 text-muted">{{ article.date | date: '%d %B %Y' }}</div>
                 <p class="card-text mb-auto">
-                    {{ article.resume }}
+                    {{ article.excerpt }}
                 </p>
-                <a href="{{ article.link }}">Lire l'article</a>
+                <a href="{{ article.url }}">Lire l'article</a>
             </div>
             <img class="card-img-right flex-auto d-none d-lg-block" style="width: 200px; height: 250px;" src="{{ article.img }}">
         </div>
     </div>
     {% endfor %}
-    <div class="col-md-6"></div>
 </div>
+<main class="container" role="main">
+    <div class="row">
+        <div class="col-md-8 blog-main">
+            <h3 class="pb-3 mb-4 font-italic border-bottom">Edito</h3>
+        </div>
+        <aside class="col-md-4 blog-sidebar">
+            <div class="p-3 mb-3 bg-light rounded">
+                <h4 class="font-italic">A propos</h4>
+                <p class="mb-0">
+                    Frédéric Pinaud, ingénieur DevOps dans une startup grenobloise dans le domaine de l'IoT. 
+                </p>
+            </div>
+            <div class="p-3">
+                <h4 class="font-italic">Archives</h4>
+                <ol class="list-unstyled mb-0">
+                    {% assign postsByMonth =
+                        site.posts | group_by_exp:"post", "post.date | date: '%B %Y'" %}
+                    {% for year in postsByMonth %}
+                      <h5>{{ year.name }}</h5>
+                        <ul>
+                          {% for post in year.items %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                          {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </ol>
+            </div>
+            <div class="p-3">
+                <h4 class="font-italic">Tags</h4>
+                {% for tag in site.tags %}
+                <a href="#">{{ tag[0] }}</a>
+                {% endfor %}
+            </div>
+            <div class="p-3">
+                <h4 class="font-italic">Ailleurs</h4>
+                <ol class="list-unstyled mb-0">
+                    <li><a href="https://me.fredericpinaud.fr">Site web</a></li>
+                    <li><a href="https://github.com/FredPi17">Github</a></li>
+                    <li><a href="https://twitter.com/FredericPinaud">Twitter</a></li>
+                </ol>
+            </div>
+        </aside>
+    </div>
+</main>

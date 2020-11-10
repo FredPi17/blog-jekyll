@@ -1,0 +1,16 @@
+{
+	"version": 3,
+	"file": "styles.css",
+	"sources": [
+		"styles.scss",
+		"_sass/main.scss",
+		"_sass/blog.scss"
+	],
+	"sourcesContent": [
+		"@import \"main\";\n@import \"blog\";",
+		"h1, H4 {\n    font-family: \"Playfair Display\", Georgia, \"Times New Roman\", serif;\n}\n\nh4 {\n    font-size: 1.5rem;\n}\n\n.h1, .h2, .h3, .h4, .h5, .h6 {\n    margin-bottom: .5rem;\n    font-family: inherit;\n    font-weight: 500;\n    line-height: 1.2;\n    color: inherit;\n}\n\n.font-italic {\n    font-style: italic !important;\n}\n",
+		".blog-footer {\n    padding: 2.5rem 0;\n    color: #999;\n    text-align: center;\n    background-color: #f9f9f9;\n    border-top: .05rem solid #e5e5e5;\n    border-bottom: 0;\n}"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,EAAE,EAAE,EAAE,CAAC,EACH,WAAW,EAAE,qDAAqD,GACrE;;AAED,AAAA,EAAE,CAAC,EACC,SAAS,EAAE,MAAM,GACpB;;AAED,AAAA,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,GAAG,EAAE,GAAG,CAAC,EACzB,aAAa,EAAE,KAAK,EACpB,WAAW,EAAE,OAAO,EACpB,WAAW,EAAE,GAAG,EAChB,WAAW,EAAE,GAAG,EAChB,KAAK,EAAE,OAAO,GACjB;;AAED,AAAA,YAAY,CAAC,EACT,UAAU,EAAE,iBAAiB,GAChC;;AClBD,AAAA,YAAY,CAAC,EACT,OAAO,EAAE,QAAQ,EACjB,KAAK,EAAE,IAAI,EACX,UAAU,EAAE,MAAM,EAClB,gBAAgB,EAAE,OAAO,EACzB,UAAU,EAAE,oBAAoB,EAChC,aAAa,EAAE,CAAC,GACnB"
+}

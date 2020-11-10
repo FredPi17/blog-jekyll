@@ -33,7 +33,9 @@ plugins:
   - jekyll-feed
 
 sass:
-  sass_dir: assets/css
+  sass_dir: _sass
+
+excerpt_separator: <!--more-->
 
 exclude: 
   - LICENSE
